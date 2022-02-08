@@ -1,0 +1,6 @@
+[submodule "rock-web"]
+	path = rock-web
+	url = git@github.com:rockboot/rock-web.git
+[submodule "rock-base"]
+	path = rock-base
+	url = git@github.com:rockboot/rock-base.git

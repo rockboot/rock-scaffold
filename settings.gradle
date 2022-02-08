@@ -1,0 +1,4 @@
+rootProject.name = 'rock-scaffold'
+include 'rock-web:rock-web-core'
+include 'rock-base:rock-base-core'
+
