@@ -4,3 +4,6 @@
 [submodule "rock-base"]
 	path = rock-base
 	url = git@github.com:rockboot/rock-base.git
+[submodule "rock-event"]
+	path = rock-event
+	url = git@github.com:rockboot/rock-event.git

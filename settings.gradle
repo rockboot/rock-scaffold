@@ -1,4 +1,9 @@
 rootProject.name = 'rock-scaffold'
 include 'rock-web:rock-web-core'
+
 include 'rock-base:rock-base-core'
+
+include 'rock-event:rock-event-core'
+include 'rock-event:rock-event-kafka'
+include 'rock-event:rock-event-rocketmq'
 

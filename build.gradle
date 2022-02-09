@@ -10,12 +10,14 @@ ext {
     druidSpringBoorStaterVersion = '1.2.8'
 }
 
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 
 configure(allprojects) {
     apply plugin: "io.spring.dependency-management"
     apply plugin: 'java-library'
+    apply plugin: "maven"
+    apply plugin: "maven-publish"
 
     dependencyManagement {
         imports {
@@ -68,7 +70,7 @@ configure(allprojects) {
 
 configure(subprojects) { subproject ->
     group = "top.rockboot.${subproject.name}"
-    version = "0.0.1"
+    version = "${property('rock-scaffold-version')}"
 
 
     test {
@@ -94,4 +96,17 @@ configure(subprojects) { subproject ->
         testRuntimeOnly("org.apache.logging.log4j:log4j-slf4j-impl")
     }
 
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'rock.scaffold'
+                artifactId = 'library'
+                version = "${property('rock-scaffold-version')}"
+
+                from components.java
+            }
+        }
+    }
+
 }
+
